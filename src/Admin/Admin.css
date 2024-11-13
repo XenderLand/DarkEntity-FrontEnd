@@ -1,0 +1,270 @@
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  }
+  body {
+    font-size: .875rem;
+
+  }
+
+.Admin{
+  margin-top: 1rem;
+
+}
+  .container{
+    height: 150px;
+    width: auto;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+    gap: 20px; /* Gap between grid items */
+  }
+  .container .box{
+    padding: 20px;
+    text-align: center;
+    border-radius: 1rem;
+    transition: transform 0.5s;
+  }
+  .container .box:hover{
+    transform: translateX(30px);
+  }
+  .container .box:last-child{
+    background-color:var(--bs-orange);
+  }
+  .container .box:nth-last-child(2){
+    background-color:cyan;
+
+  }
+  .container .box:first-child{
+    background-color:chartreuse;
+  
+  }
+  .container .box h2{
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .container .box h6{
+    font-size: 1rem;
+    color: var(--bs-light);
+    background-color: var(--bs-dark);
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: .2rem;
+    transition: transform 0.5s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  
+  }
+  .container .box h6:hover{
+    transform: translateY(10px);
+  
+  }
+  .upload{
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    margin-bottom: 2rem;
+    background-color: black;
+    border-radius: 1rem;
+    
+  }
+
+  .upload h3{
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+
+  }
+  .upload form{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: .8rem;
+  }
+    .list h2{
+      font-size: 1.5rem;
+      color: white;
+      justify-content: center;
+      text-align: center;
+    }
+  .sidemenu{
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    background-color:var(--bs-light);
+    box-shadow: 0 0 3px  black;
+    border-radius: .7rem;
+    padding: .3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sidemenu h3{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  /* .red_light_btn{
+    justify-content: center;
+    align-items: center;
+  } */
+  /* .red_light_btn a{
+    position: relative;
+    display: inline-block;
+    padding: 3px 8px;
+    color: crimson;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family:roboto;
+    font-size: .6rem;
+    overflow: hidden;
+    transition: 0.2s;
+    box-shadow: 0 0 3px crimson;
+  }
+  .red_light_btn a:hover{
+    color: black;
+    background:crimson;
+    box-shadow: 0 0 10px crimson ,
+                0 0 40px crimson,
+                0 0 80px crimson ;
+    transition-delay: 0.5s;
+
+  }
+
+  .red_light_btn a span{
+    position: absolute;
+    display: block;
+  }
+  .red_light_btn a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, crimson);
+  }
+  .red_light_btn a:hover span:nth-child(1){
+      left: 100%;
+      transition: 1s;
+  }
+  
+  .red_light_btn a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(270deg, transparent, crimson);
+  }
+  .red_light_btn a:hover span:nth-child(3){
+      right: 100%;
+      transition: 1s;
+      transition-delay: 0.5s;
+  }
+
+  .red_light_btn a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, crimson);
+  }
+  .red_light_btn a:hover span:nth-child(2){
+      top: 100%;
+      transition: 1s;
+      transition-delay: 0.25s;
+  }
+
+  
+  .red_light_btn a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, crimson);
+  }
+  .red_light_btn a:hover span:nth-child(4){
+      bottom: 100%;
+      transition: 1s;
+      transition-delay: 0.75s;
+  } */
+
+    #grid {
+      margin-top: 4rem;
+    }
+  
+  
+    #left {
+      background: crimson;
+      overflow: hidden;
+   
+      
+    }
+ 
+  
+    .h3 {
+      text-decoration: none;
+      color: white;
+      font-style: normal;
+    }
+  
+  
+    #right {
+      background: var(--bs-dark);
+      border: 3rem solid rgb(0, 0, 0);
+      
+    }
+  
+    /* the magic */
+    #grid {
+      transition: 300ms;
+      display: grid;
+      grid-template-columns: 28px auto;
+    }
+  
+    #grid:has(#left:hover) {
+      grid-template-columns: 10% auto;
+    }
+  
+    /* magic + CSS variable */
+    #grid {
+      transition: 300ms;
+      display: grid;
+      grid-template-columns: var(--left, 48px) auto;
+    }
+  
+    #grid:has(#left:hover) {
+      --left: 30%;
+    }
+    .actions{
+      display: flex;
+    }
+    .action_btn{
+      cursor: pointer;
+      padding: .5rem;
+    }
+   

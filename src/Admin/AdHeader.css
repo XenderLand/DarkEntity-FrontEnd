@@ -1,0 +1,27 @@
+.AdHead header {
+  position: fixed;
+    background-color:#333333;
+    color: #fff;
+    padding: 5px;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+
+
+  }
+  
+ .AdHead header h1 {
+    margin: 0;
+  }
+ .AdHead header .side-btn{
+    display: flex;
+    margin-left: 35rem;
+    margin-top: .5rem;
+
+  }
+ .AdHead header h1{
+    font-size: 2rem;
+  }
+  
+  /* Add styles for navigation links if needed */
+  

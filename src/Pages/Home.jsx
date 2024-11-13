@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useCallback } from "react";
 import "../CSS/Home.css";
 import axios from "axios";
 import { register } from "swiper/element/bundle";
@@ -33,18 +33,22 @@ const Home = () => {
     }
     return `${Math.floor(secondsPast / 31536000)} years ago`;
   }
+  const URL = process.env.REACT_APP_API_URL;
 
   const [seriesList, setSeriesList] = useState([]);
 
+  const loadSeries = useCallback(async () => {
+    try {
+      const result = await axios.get(`${URL}/series`);
+      setSeriesList(result.data);
+    } catch (error) {
+      console.error("Error loading series:", error);
+    }
+  }, [URL]);
+
   useEffect(() => {
     loadSeries();
-  }, []);
-
-  async function loadSeries() {
-    const result = await axios.get(`${process.env.REACT_APP_API_URL}/series`);
-    setSeriesList(result.data);
-  }
-
+  }, [loadSeries]);
   const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
@@ -52,7 +56,7 @@ const Home = () => {
   }, []);
 
   async function loadMovies() {
-    const result = await axios.get("http://localhost:5000/movies");
+    const result = await axios.get(`${process.env.REACT_APP_URL}/movies`);
     setMovieList(result.data);
     console.log(result.data);
   }

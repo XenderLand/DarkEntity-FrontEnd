@@ -21,7 +21,7 @@ import SeriesDetails from "./Pages/SeriesDetails";
 import MoviesDownload from "./Pages/MoviesDownload";
 import SeriesDownload from "./Pages/SeriesDownload";
 
-export const URL = process.env.REACT_SERVER_URL;
+// export const URL = process.env.REACT_SERVER_URL;
 
 function App() {
   return (

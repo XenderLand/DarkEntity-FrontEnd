@@ -31,7 +31,7 @@ const Home = () => {
     }
     return `${Math.floor(secondsPast / 31536000)} years ago`;
   }
-  const URL = process.env.BACK_END_URL;
+  const URL = "https://darkentity.onrender.com";
 
   //  useEffect(() => {
   //     const fetchBookings = async () => {
@@ -71,7 +71,7 @@ const Home = () => {
   }, []);
 
   async function loadMovies() {
-    const result = await axios.get(`${process.env.BACK_END_URL}/movies`);
+    const result = await axios.get(`https://darkentity.onrender.com/movies`);
     setMovieList(result.data);
     console.log(result.data);
   }

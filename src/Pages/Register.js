@@ -83,8 +83,7 @@ function Register() {
               type="text"
               className="form-control"
               id="category"
-              placeholder="Type to search..."
-            ></input>
+              placeholder="Type to search..."></input>
             <datalist id="datalistOptions">
               <option value="Cosmetics" />
               <option value="Foods" />
@@ -103,8 +102,7 @@ function Register() {
               className="form-control "
               id="productDescription"
               cols="30"
-              rows="5"
-            >
+              rows="5">
               {" "}
             </textarea>
           </div>
@@ -114,8 +112,7 @@ function Register() {
             <input
               type="file"
               className="form-control"
-              id="productImage1"
-            ></input>
+              id="productImage1"></input>
           </div>
 
           <div className="input-group mb-3">

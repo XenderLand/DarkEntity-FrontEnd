@@ -56,15 +56,13 @@ const Admin = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton
               style={{
                 backgroundColor: "black",
                 color: "white",
                 cursor: "pointer",
-              }}
-            >
+              }}>
               <ListItemIcon>
                 <DashboardIcon style={{ color: "white" }} />
               </ListItemIcon>
@@ -78,8 +76,7 @@ const Admin = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton>
               <ListItemIcon>
                 <LocalMoviesIcon style={{ color: "white" }} />
@@ -94,8 +91,7 @@ const Admin = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton>
               <ListItemIcon>
                 <LiveTvIcon style={{ color: "white" }} />
@@ -110,8 +106,7 @@ const Admin = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton>
               <ListItemIcon>
                 <MovieFilterIcon style={{ color: "white" }} />
@@ -126,8 +121,7 @@ const Admin = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton>
               <ListItemIcon>
                 <MovieCreation style={{ color: "white" }} />
@@ -167,8 +161,7 @@ const Admin = () => {
                   margin: "0 auto",
                   border: ".5rem solid #dc3545",
                   color: "black",
-                }}
-              >
+                }}>
                 {" "}
                 <thead>
                   <tr>
@@ -233,8 +226,7 @@ const Admin = () => {
                   margin: "0 auto",
                   border: ".5rem solid #dc3545",
                   color: "black",
-                }}
-              >
+                }}>
                 {" "}
                 <thead>
                   <tr>
@@ -309,8 +301,7 @@ const Admin = () => {
                   margin: "0 auto",
                   border: ".5rem solid #dc3545",
                   color: "black",
-                }}
-              >
+                }}>
                 {" "}
                 <thead>
                   <tr>

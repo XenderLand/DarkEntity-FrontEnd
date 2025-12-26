@@ -121,8 +121,7 @@ const SeriesDetails = () => {
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
         <p>
           <strong className=" text-lightBlue font-bold text-lg">

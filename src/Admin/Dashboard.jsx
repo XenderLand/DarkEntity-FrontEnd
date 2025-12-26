@@ -83,8 +83,7 @@ const Dasboard = () => {
             backgroundColor: "green",
             textDecoration: "none",
             color: "white",
-          }}
-        >
+          }}>
           <ListItemButton>
             <ListItemIcon>
               <DashboardIcon style={{ color: "white" }} />
@@ -99,8 +98,7 @@ const Dasboard = () => {
             backgroundColor: "green",
             textDecoration: "none",
             color: "white",
-          }}
-        >
+          }}>
           <ListItemButton>
             <ListItemIcon>
               <MovieCreation style={{ color: "white" }} />
@@ -115,8 +113,7 @@ const Dasboard = () => {
             backgroundColor: "green",
             textDecoration: "none",
             color: "white",
-          }}
-        >
+          }}>
           <ListItemButton>
             <ListItemIcon>
               <Movie style={{ color: "white" }} />
@@ -130,8 +127,7 @@ const Dasboard = () => {
             backgroundColor: "green",
             textDecoration: "none",
             color: "white",
-          }}
-        >
+          }}>
           <ListItemButton>
             <ListItemIcon>
               <Movie style={{ color: "white" }} />
@@ -145,15 +141,13 @@ const Dasboard = () => {
             backgroundColor: "green",
             textDecoration: "none",
             color: "white",
-          }}
-        >
+          }}>
           <ListItemButton
             style={{
               backgroundColor: "black",
               color: "white",
               cursor: "pointer",
-            }}
-          >
+            }}>
             <ListItemIcon>
               <MovieCreation style={{ color: "white" }} />
             </ListItemIcon>
@@ -190,8 +184,7 @@ const Dasboard = () => {
                   className="form-select"
                   name="category"
                   value={formData.category}
-                  onChange={handleChange}
-                >
+                  onChange={handleChange}>
                   <option value="">Choose...</option>
                   <option value="Action">Action</option>
                   <option value="Romantic">Romantic</option>
@@ -216,8 +209,7 @@ const Dasboard = () => {
                   name="description"
                   rows="5"
                   value={formData.description}
-                  onChange={handleChange}
-                ></textarea>
+                  onChange={handleChange}></textarea>
               </div>
               <div className="col-12">
                 <label htmlFor="downloadLink" className="form-label">
@@ -342,8 +334,7 @@ const Dasboard = () => {
                   margin: "0 auto",
                   border: ".5rem solid #dc3545",
                   color: "black",
-                }}
-              >
+                }}>
                 <thead>
                   <tr>
                     <th>No</th>
@@ -409,8 +400,7 @@ const Dasboard = () => {
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                    ></iframe>
+                      allowfullscreen></iframe>
                   </div>
                   <p>Category: {movie.category}</p>
                   <p>Country: {movie.country}</p>

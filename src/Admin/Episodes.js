@@ -68,8 +68,7 @@ const Episodes = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton>
               <ListItemIcon>
                 <DashboardIcon style={{ color: "white" }} />
@@ -84,8 +83,7 @@ const Episodes = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton>
               <ListItemIcon>
                 <MovieCreation style={{ color: "white" }} />
@@ -100,8 +98,7 @@ const Episodes = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton>
               <ListItemIcon>
                 <Movie style={{ color: "white" }} />
@@ -116,15 +113,13 @@ const Episodes = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton
               style={{
                 backgroundColor: "black",
                 color: "white",
                 cursor: "pointer",
-              }}
-            >
+              }}>
               <ListItemIcon>
                 <Movie style={{ color: "white" }} />
               </ListItemIcon>
@@ -138,8 +133,7 @@ const Episodes = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton>
               <ListItemIcon>
                 <MovieCreation style={{ color: "white" }} />
@@ -193,8 +187,7 @@ const Episodes = () => {
                   className="form-select"
                   name="season"
                   value={season}
-                  onChange={(e) => setSeason(e.target.value)}
-                >
+                  onChange={(e) => setSeason(e.target.value)}>
                   <option value="">Choose...</option>
                   <option value="Season 1">Season 1</option>
                   <option value="Season 2">Season 2</option>
@@ -213,8 +206,7 @@ const Episodes = () => {
                   className="form-select"
                   name="episode"
                   value={episode}
-                  onChange={(e) => setEpisode(e.target.value)}
-                >
+                  onChange={(e) => setEpisode(e.target.value)}>
                   <option value="">Choose...</option>
                   <option value="Episode 1">Episode 1</option>
                   <option value="Episode 2">Episode 2</option>
@@ -289,8 +281,7 @@ const Episodes = () => {
                   margin: "0 auto",
                   border: ".5rem solid #dc3545",
                   color: "black",
-                }}
-              >
+                }}>
                 {" "}
                 <thead>
                   <tr>

@@ -74,10 +74,9 @@ const Header = () => {
       <header className=" lg:fixed text-lightBlue flex p-3 top-0 w-full justify-between ">
         <Link
           to="/"
-          className=" text-2xl no-underline text-lightBlue font-bold border-lightBlue border-b-2 "
-        >
+          className=" text-2xl no-underline text-lightBlue font-bold border-lightBlue border-b-2 ">
           Dark
-          <span className="text-darkNavy font-serif text-2xl italic bg-lightBlue p-1 rounded-tl-3xl rounded-br-3xl">
+          <span className="text-darkNavy text-2xl italic bg-lightBlue p-1 rounded-tl-3xl rounded-br-3xl">
             Entity
             <VideoCameraBack />
           </span>
@@ -134,8 +133,7 @@ const Header = () => {
             <li>
               <Link
                 className=" block text-lightBlue text-center px-3 py-1 no-underline hover:bg-lightBlue hover:text-darkRich "
-                href="/"
-              >
+                href="/">
                 K-Drama
               </Link>
             </li>
@@ -157,13 +155,11 @@ const Header = () => {
                 <li
                   key={suggestion._id}
                   onClick={() => handleSuggestionClick(suggestion)}
-                  className=" p-3 pointer border-b-2 border-b-lightBlue truncate overflow-hidden"
-                >
+                  className=" p-3 pointer border-b-2 border-b-lightBlue truncate overflow-hidden">
                   {/* <Link to={`/${suggestion.type}/${suggestion._id}`}> */}
                   <Link
                     className="hover:text-white"
-                    to={`/seriesDetails/${suggestion._id}`}
-                  >
+                    to={`/seriesDetails/${suggestion._id}`}>
                     {suggestion.title}
                   </Link>
                 </li>

@@ -6,8 +6,6 @@ import { register } from "swiper/element/bundle";
 import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
 
-import StickyHeadTable from "../Admin/StickyHeadTable";
-
 import { ArrowUpward } from "@mui/icons-material";
 register();
 const Home = () => {
@@ -34,6 +32,23 @@ const Home = () => {
     return `${Math.floor(secondsPast / 31536000)} years ago`;
   }
   const URL = process.env.REACT_APP_API_URL;
+
+  //  useEffect(() => {
+  //     const fetchBookings = async () => {
+  //       try {
+  //         const response = await axios.get(
+  //           `${process.env.REACT_APP_NODE_ADMIN_API}/api/admin/bookings2/${caretakerId}`
+  //         );
+  //         setBookings(response.data);
+  //       } catch (err) {
+  //         console.error("Error fetching bookings:", err.message);
+  //       } finally {
+  //         setLoading(false);
+  //       }
+  //     };
+
+  //     fetchBookings();
+  //   }, [caretakerId]);
 
   const [seriesList, setSeriesList] = useState([]);
 
@@ -73,12 +88,10 @@ const Home = () => {
                 {movieList.map((movie) => (
                   <div
                     className="product-container overflow-hidden rounded-xl shadow-custom-lightBlue mt-2"
-                    key={movie.id}
-                  >
+                    key={movie.id}>
                     <div
                       className="product relative"
-                      style={{ textDecoration: "none" }}
-                    >
+                      style={{ textDecoration: "none" }}>
                       <Link to={`/seriesDetails/movies/${movie._id}`}>
                         <img
                           src={`http://localhost:5000/${movie.image}`}
@@ -91,7 +104,7 @@ const Home = () => {
                         <span className=" relative p-1 mt-2 text-white left-2 bg-red-600 text-xs font-semibold rounded-xl ">
                           {movie.category}
                         </span>
-                        <h3 className=" text-xs font-semibold p-1 font-serif ">
+                        <h3 className=" text-xs font-semibold p-1  ">
                           {movie.title}
                         </h3>
                       </div>
@@ -99,10 +112,10 @@ const Home = () => {
                         <div className="product-details">
                           <h3 className=" p-2 text-sm">{movie.title}</h3>
                           <div className=" flex justify-between px-2">
-                            <p className="ml-1 text-xs font-semibold text-red-600 font-serif">
+                            <p className="ml-1 text-xs font-semibold text-red-600 ">
                               {movie.country}
                             </p>
-                            <p className=" ml-1 text-xs font-semibold text-white font-serif ">
+                            <p className=" ml-1 text-xs font-semibold text-white  ">
                               {timeSince(movie.releaseDate)}
                             </p>
                           </div>
@@ -125,12 +138,10 @@ const Home = () => {
                 {seriesList.map((series) => (
                   <div
                     className="product-container overflow-hidden rounded-xl shadow-custom-lightBlue mt-2"
-                    key={series.id}
-                  >
+                    key={series.id}>
                     <div
                       className="product relative"
-                      style={{ textDecoration: "none" }}
-                    >
+                      style={{ textDecoration: "none" }}>
                       <Link to={`/seriesDetails/series/${series._id}`}>
                         <img
                           src={`http://localhost:5000/${series.image}`}
@@ -143,7 +154,7 @@ const Home = () => {
                         <span className=" relative p-1 mt-2 text-white left-2 bg-red-600 text-xs font-semibold rounded-xl ">
                           {series.category}
                         </span>
-                        <h3 className=" text-xs font-semibold p-1 font-serif ">
+                        <h3 className=" text-xs font-semibold p-1  ">
                           {series.title}
                         </h3>
                       </div>
@@ -151,10 +162,10 @@ const Home = () => {
                         <div className="product-details">
                           <h3 className=" p-2 text-sm">{series.title}</h3>
                           <div className=" flex justify-between px-2">
-                            <p className="ml-1 text-xs font-semibold text-red-600 font-serif">
+                            <p className="ml-1 text-xs font-semibold text-red-600 ">
                               {series.country}
                             </p>
-                            <p className=" ml-1 text-xs font-semibold text-white font-serif ">
+                            <p className=" ml-1 text-xs font-semibold text-white  ">
                               {timeSince(series.releaseDate)}
                             </p>
                           </div>
@@ -177,12 +188,10 @@ const Home = () => {
                 {seriesList.map((series) => (
                   <div
                     className="product-container overflow-hidden rounded-xl shadow-custom-lightBlue mt-2"
-                    key={series.id}
-                  >
+                    key={series.id}>
                     <div
                       className="product relative"
-                      style={{ textDecoration: "none" }}
-                    >
+                      style={{ textDecoration: "none" }}>
                       <Link to={`/seriesDetails/series/${series._id}`}>
                         <img
                           src={`http://localhost:5000/${series.image}`}
@@ -195,7 +204,7 @@ const Home = () => {
                         <span className=" relative p-1 mt-2 text-white left-2 bg-red-600 text-xs font-semibold rounded-xl ">
                           {series.category}
                         </span>
-                        <h3 className=" text-xs font-semibold p-1 font-serif ">
+                        <h3 className=" text-xs font-semibold p-1  ">
                           {series.title}
                         </h3>
                       </div>
@@ -203,10 +212,10 @@ const Home = () => {
                         <div className="product-details">
                           <h3 className=" p-2 text-sm">{series.title}</h3>
                           <div className=" flex justify-between px-2">
-                            <p className="ml-1 text-xs font-semibold text-red-600 font-serif">
+                            <p className="ml-1 text-xs font-semibold text-red-600 ">
                               {series.country}
                             </p>
-                            <p className=" ml-1 text-xs font-semibold text-white font-serif ">
+                            <p className=" ml-1 text-xs font-semibold text-white  ">
                               {timeSince(series.releaseDate)}
                             </p>
                           </div>
@@ -223,8 +232,6 @@ const Home = () => {
         <a href="#top" className="top_page ">
           <ArrowUpward />
         </a>
-
-        <StickyHeadTable />
       </div>
     </div>
   );

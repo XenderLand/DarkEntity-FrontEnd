@@ -18,6 +18,7 @@ const Series = () => {
     description: "",
     trailer: "",
     category: "",
+    sub_category: "",
     releaseDate: "",
     language: "",
     genre: "",
@@ -49,6 +50,7 @@ const Series = () => {
       description: series.description,
       trailer: series.trailer,
       category: series.category,
+      sub_category: series.sub_category,
       releaseDate: series.releaseDate,
       language: series.language,
       genre: series.genre,
@@ -100,6 +102,7 @@ const Series = () => {
         description: "",
         trailer: "",
         category: "",
+        sub_category: "",
         releaseDate: "",
         language: "",
         genre: "",
@@ -182,8 +185,7 @@ const Series = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton>
               <ListItemIcon>
                 <DashboardIcon style={{ color: "white" }} />
@@ -198,8 +200,7 @@ const Series = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton>
               <ListItemIcon>
                 <MovieCreation style={{ color: "white" }} />
@@ -214,15 +215,13 @@ const Series = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton
               style={{
                 backgroundColor: "black",
                 color: "white",
                 cursor: "pointer",
-              }}
-            >
+              }}>
               <ListItemIcon>
                 <Movie style={{ color: "white" }} />
               </ListItemIcon>
@@ -235,8 +234,7 @@ const Series = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton>
               <ListItemIcon>
                 <Movie style={{ color: "white" }} />
@@ -250,8 +248,7 @@ const Series = () => {
               backgroundColor: "green",
               textDecoration: "none",
               color: "white",
-            }}
-          >
+            }}>
             <ListItemButton>
               <ListItemIcon>
                 <MovieCreation style={{ color: "white" }} />
@@ -268,7 +265,7 @@ const Series = () => {
             <form className="row g-3" style={{ marginBottom: "5rem" }}>
               <h3>Add Series</h3>
 
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <label htmlFor="title" className="form-label">
                   Title
                 </label>
@@ -290,11 +287,27 @@ const Series = () => {
                   className="form-select"
                   name="category"
                   value={formData.category}
-                  onChange={handleInputChange}
-                >
+                  onChange={handleInputChange}>
                   <option value="">Choose...</option>
-                  <option value="Action">Series</option>
-                  <option value="Romantic">Movies</option>
+                  <option value="Series">Series</option>
+                  <option value="Movies">Movies</option>
+                </select>
+              </div>
+              <div className="col-md-6">
+                <label htmlFor="sub_category" className="form-label">
+                  Sub-Category
+                </label>
+                <select
+                  id="sub_category"
+                  className="form-select"
+                  name="sub_category"
+                  value={formData.sub_category}
+                  onChange={handleInputChange}>
+                  <option value="">Choose...</option>
+                  <option value="Hollywood">Hollywood</option>
+                  <option value="K-Drama">K-Drama</option>
+                  <option value="J-Drama">J-Drama</option>
+                  <option value="African">African</option>
                 </select>
               </div>
               <div className="col-12">
@@ -307,8 +320,7 @@ const Series = () => {
                   name="description"
                   rows="6"
                   value={formData.description}
-                  onChange={handleInputChange}
-                >
+                  onChange={handleInputChange}>
                   {" "}
                 </textarea>
               </div>
@@ -337,8 +349,7 @@ const Series = () => {
                   name="trailer"
                   rows="3"
                   value={formData.trailer}
-                  onChange={handleInputChange}
-                ></input>
+                  onChange={handleInputChange}></input>
               </div>
               <div className="col-6">
                 <label htmlFor="language" className="form-label">
@@ -445,17 +456,17 @@ const Series = () => {
                   margin: "0 auto",
                   border: ".5rem solid #dc3545",
                   color: "black",
-                }}
-              >
+                }}>
                 {" "}
                 <thead>
                   <tr>
                     <th>No</th>
-                    <th>title </th>
+                    <th>Title </th>
                     <th>Descriptions</th>
-                    <th>trailer</th>
-                    <th>category</th>
-                    <th>language</th>
+                    <th>Trailer</th>
+                    <th>Category</th>
+                    <th>Sub-category</th>
+                    <th>Language</th>
                     <th>Episodes No</th>
                     <th>Episodes</th>
                     <th>Image</th>
@@ -471,6 +482,7 @@ const Series = () => {
                         <td>{series.description}</td>
                         <td>{series.trailer}</td>
                         <td>{series.category}</td>
+                        <td>{series.sub_category}</td>
                         <td>{series.language}</td>
                         <td>{series.episodes}</td>
 
@@ -500,16 +512,14 @@ const Series = () => {
                             <a
                               className="action_btn"
                               href
-                              onClick={() => handleEdit(series)}
-                            >
+                              onClick={() => handleEdit(series)}>
                               <EditIcon fontSize="large" />
                             </a>
                             <a
                               className="action_btn"
                               href
                               onClick={() => handleDelete(series._id)}
-                              style={{ color: "red" }}
-                            >
+                              style={{ color: "red" }}>
                               <DeleteIcon fontSize="large" />
                             </a>
                           </div>
@@ -532,8 +542,7 @@ const Series = () => {
                   margin: "0 auto",
                   border: ".5rem solid #dc3545",
                   color: "black",
-                }}
-              >
+                }}>
                 {" "}
                 <thead>
                   <tr>
@@ -588,8 +597,7 @@ const Series = () => {
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                    ></iframe>
+                      allowfullscreen></iframe>
                   </div>
                   <p>Category: {series.category}</p>
                   <p>Episodes: {series.episodes}</p>

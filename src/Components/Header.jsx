@@ -28,7 +28,7 @@ const Header = () => {
     if (query.length > 0) {
       try {
         const result = await axios.get(
-          `http://localhost:5000/search?query=${query}`
+          `https://darkentity.onrender.com/search?query=${query}`
         );
         setSuggestions(result.data);
       } catch (error) {

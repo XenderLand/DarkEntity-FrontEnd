@@ -30,19 +30,23 @@ const SeriesDetails = () => {
   const [details, setDetails] = useState(null);
 
   const loadDetails = useCallback(async () => {
-    const result = await axios.get(`http://localhost:5000/${type}/${id}`);
+    const result = await axios.get(
+      `https://darkentity.onrender.com/${type}/${id}`
+    );
     setDetails(result.data);
   }, [id, type]);
 
   // const loadSeriesDetails = useCallback(async () => {
-  //   const result = await axios.get(`http://localhost:5000/series/${id}`);
+  //   const result = await axios.get(`https://darkentity.onrender.com/series/${id}`);
   //   setSeries(result.data);
   // }, [id]);
 
   const [episodesList, setEpisodesList] = useState([]);
   const loadEpisodes = useCallback(async () => {
     if (type === "series") {
-      const result = await axios.get("http://localhost:5000/episodes");
+      const result = await axios.get(
+        "https://darkentity.onrender.com/episodes"
+      );
       setEpisodesList(result.data);
     }
   }, [type]);
@@ -62,7 +66,7 @@ const SeriesDetails = () => {
         </h2>
         <div className="w-4/6 text-center mx-auto ">
           <img
-            src={`http://localhost:5000/${details.image}`}
+            src={`https://darkentity.onrender.com/${details.image}`}
             alt={details.image}
             className=" w-4/5 h-auto mt-6 mx-auto"
           />

@@ -8,7 +8,9 @@ const MoviesDownload = () => {
   const [details, setDetails] = useState([]);
 
   const loadDetails = useCallback(async () => {
-    const result = await axios.get(`http://localhost:5000/movies/${id}`);
+    const result = await axios.get(
+      `https://darkentity.onrender.com/movies/${id}`
+    );
     setDetails(result.data);
   }, [id]);
 

@@ -73,7 +73,7 @@ const Series = () => {
 
       if (editId) {
         const response = await axios.put(
-          `http://localhost:5000/series/${editId}`,
+          `https://darkentity.onrender.com/series/${editId}`,
           formDataToSend,
           {
             headers: {
@@ -85,7 +85,7 @@ const Series = () => {
         alert("Series updated successfully");
       } else {
         const response = await axios.post(
-          "http://localhost:5000/series",
+          "https://darkentity.onrender.com/series",
           formDataToSend,
           {
             headers: {
@@ -125,7 +125,7 @@ const Series = () => {
   const loadSeries = async (limit = 999999999) => {
     try {
       const result = await axios.get(
-        `http://localhost:5000/series?limit=${limit}`
+        `https://darkentity.onrender.com/series?limit=${limit}`
       );
       const sortedData = result.data.sort(
         (a, b) => new Date(b.releaseDate) - new Date(a.releaseDate)
@@ -144,13 +144,13 @@ const Series = () => {
   }, []);
 
   async function loadEpisodes() {
-    const result = await axios.get("http://localhost:5000/episodes");
+    const result = await axios.get("https://darkentity.onrender.com/episodes");
     setEpisodesList(result.data);
   }
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/series/${id}`);
+      await axios.delete(`https://darkentity.onrender.com/series/${id}`);
       alert("Series deleted successfully");
       loadSeries();
     } catch (error) {
@@ -502,7 +502,7 @@ const Series = () => {
                         </td>
                         <td>
                           <img
-                            src={`http://localhost:5000/${series.image}`}
+                            src={`https://darkentity.onrender.com/${series.image}`}
                             alt={series.image}
                             style={{ maxWidth: "50px" }}
                           />
@@ -603,7 +603,7 @@ const Series = () => {
                   <p>Episodes: {series.episodes}</p>
                   {/* Display other series fields as needed */}
                   <img
-                    src={`http://localhost:5000/${series.image}`}
+                    src={`https://darkentity.onrender.com/${series.image}`}
                     alt={series.image}
                     style={{ maxWidth: "200px" }}
                   />

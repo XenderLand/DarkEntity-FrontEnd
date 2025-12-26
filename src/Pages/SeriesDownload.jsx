@@ -9,19 +9,21 @@ const DownloadPage = () => {
   //   const [details, setDetails] = useState([]);
 
   //   const loadDetails = useCallback(async () => {
-  //     const result = await axios.get(`http://localhost:5000/${type}/${id}`);
+  //     const result = await axios.get(`https://darkentity.onrender.com/${type}/${id}`);
   //     setDetails(result.data);
   //   }, [id, type]);
 
   // const loadSeriesDetails = useCallback(async () => {
-  //   const result = await axios.get(`http://localhost:5000/series/${id}`);
+  //   const result = await axios.get(`https://darkentity.onrender.com/series/${id}`);
   //   setSeries(result.data);
   // }, [id]);
 
   const [episodesList, setEpisodesList] = useState([]);
 
   const loadEpisodes = useCallback(async () => {
-    const result = await axios.get(`http://localhost:5000/episodes/${id}`);
+    const result = await axios.get(
+      `https://darkentity.onrender.com/episodes/${id}`
+    );
     setEpisodesList(result.data);
   }, [id]);
 

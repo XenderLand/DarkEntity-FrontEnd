@@ -26,13 +26,13 @@ const Episodes = () => {
   }, []);
 
   async function loadEpisodes() {
-    const result = await axios.get("http://localhost:5000/episodes");
+    const result = await axios.get("https://darkentity.onrender.com/episodes");
     setEpisodesList(result.data);
   }
 
   // useEffect(() => {
   //   // Fetch series data from backend
-  //   fetch('http://localhost:5000/episodes')
+  //   fetch('https://darkentity.onrender.com/episodes')
   //     .then(response => response.json())
   //     .then(data => setEpisodesList(data))
   //     .catch(error => console.error('Error fetching series:', error));
@@ -41,13 +41,16 @@ const Episodes = () => {
   const addEpisodes = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post("http://localhost:5000/episodes", {
-        seriesTitle,
-        episodeTitle,
-        downloadLink,
-        season,
-        episode,
-      });
+      const result = await axios.post(
+        "https://darkentity.onrender.com/episodes",
+        {
+          seriesTitle,
+          episodeTitle,
+          downloadLink,
+          season,
+          episode,
+        }
+      );
 
       console.log(result.data);
       loadEpisodes();

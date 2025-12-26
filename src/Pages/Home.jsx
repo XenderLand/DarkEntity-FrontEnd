@@ -31,7 +31,7 @@ const Home = () => {
     }
     return `${Math.floor(secondsPast / 31536000)} years ago`;
   }
-  const URL = process.env.REACT_APP_API_URL;
+  const URL = process.env.BACK_END_URL;
 
   //  useEffect(() => {
   //     const fetchBookings = async () => {
@@ -71,7 +71,7 @@ const Home = () => {
   }, []);
 
   async function loadMovies() {
-    const result = await axios.get(`${process.env.REACT_APP_URL}/movies`);
+    const result = await axios.get(`${process.env.BACK_END_URL}/movies`);
     setMovieList(result.data);
     console.log(result.data);
   }
@@ -94,7 +94,7 @@ const Home = () => {
                       style={{ textDecoration: "none" }}>
                       <Link to={`/seriesDetails/movies/${movie._id}`}>
                         <img
-                          src={`http://localhost:5000/${movie.image}`}
+                          src={`https://darkentity.onrender.com/${movie.image}`}
                           alt={movie.image}
                           className="product-image w-full h-72"
                         />
@@ -144,7 +144,7 @@ const Home = () => {
                       style={{ textDecoration: "none" }}>
                       <Link to={`/seriesDetails/series/${series._id}`}>
                         <img
-                          src={`http://localhost:5000/${series.image}`}
+                          src={`https://darkentity.onrender.com/${series.image}`}
                           alt={series.image}
                           className="product-image w-full h-72"
                         />
@@ -194,7 +194,7 @@ const Home = () => {
                       style={{ textDecoration: "none" }}>
                       <Link to={`/seriesDetails/series/${series._id}`}>
                         <img
-                          src={`http://localhost:5000/${series.image}`}
+                          src={`https://darkentity.onrender.com/${series.image}`}
                           alt={series.image}
                           className="product-image w-full h-72"
                         />

@@ -42,7 +42,7 @@ const Dasboard = () => {
         formDataToSend.append(key, formData[key]);
       }
       const response = await axios.post(
-        "http://localhost:5000/movies",
+        "https://darkentity.onrender.com/movies",
         formDataToSend,
         {
           headers: {
@@ -69,7 +69,7 @@ const Dasboard = () => {
   }, []);
 
   async function loadMovies() {
-    const result = await axios.get("http://localhost:5000/movies");
+    const result = await axios.get("https://darkentity.onrender.com/movies");
     setMovieList(result.data);
     console.log(result.data);
   }
@@ -362,7 +362,7 @@ const Dasboard = () => {
 
                         <td>
                           <img
-                            src={`http://localhost:5000/${movie.image}`}
+                            src={`https://darkentity.onrender.com/${movie.image}`}
                             alt={movie.image}
                             style={{ maxWidth: "50px" }}
                           />
@@ -409,7 +409,7 @@ const Dasboard = () => {
                   <p>Cast: {movie.cast}</p>
                   {/* Display other movie fields as needed */}
                   <img
-                    src={`http://localhost:5000/${movie.image}`}
+                    src={`https://darkentity.onrender.com/${movie.image}`}
                     alt={movie.image}
                     style={{ maxWidth: "200px" }}
                   />

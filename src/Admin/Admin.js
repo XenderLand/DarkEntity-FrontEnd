@@ -18,7 +18,7 @@ const Admin = () => {
 
   useEffect(() => {
     // Fetch series data from backend
-    fetch("http://localhost:5000/series")
+    fetch("https://darkentity.onrender.com/series")
       .then((response) => response.json())
       .then((data) => setSeriesList(data))
       .catch((error) => console.error("Error fetching series:", error));
@@ -31,7 +31,7 @@ const Admin = () => {
   }, []);
 
   async function loadEpisodes() {
-    const result = await axios.get("http://localhost:5000/episodes");
+    const result = await axios.get("https://darkentity.onrender.com/episodes");
     setEpisodesList(result.data);
   }
 
@@ -42,7 +42,7 @@ const Admin = () => {
   }, []);
 
   async function loadMovies() {
-    const result = await axios.get("http://localhost:5000/movies");
+    const result = await axios.get("https://darkentity.onrender.com/movies");
     setMovieList(result.data);
     console.log(result.data);
   }
@@ -194,7 +194,7 @@ const Admin = () => {
 
                         <td>
                           <img
-                            src={`http://localhost:5000/${movie.image}`}
+                            src={`https://darkentity.onrender.com/${movie.image}`}
                             alt={movie.image}
                             style={{ maxWidth: "50px" }}
                           />
@@ -270,7 +270,7 @@ const Admin = () => {
                         </td>
                         <td>
                           <img
-                            src={`http://localhost:5000/${series.image}`}
+                            src={`https://darkentity.onrender.com/${series.image}`}
                             alt={series.image}
                             style={{ maxWidth: "50px" }}
                           />

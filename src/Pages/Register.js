@@ -22,11 +22,14 @@ function Register() {
   const collectData = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post("http://localhost:5000/register", {
-        name,
-        email,
-        password,
-      });
+      const result = await axios.post(
+        "https://darkentity.onrender.com/register",
+        {
+          name,
+          email,
+          password,
+        }
+      );
       localStorage.setItem("user", JSON.stringify(result.data));
 
       console.log(result.data);
